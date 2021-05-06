@@ -20,6 +20,7 @@ public class MyUserDetailsService implements UserDetailsService {
         return new User("user", "password", new ArrayList<>());
     }
 
+    // Use for password not hashing
     @Bean
     public PasswordEncoder passwordEncoder() {
         return NoOpPasswordEncoder.getInstance();
